@@ -114,6 +114,7 @@
     .example video {
       width: 100%;
       display: block;
+      background: #000;
     }
     .example p {
       padding: 10px;
@@ -227,15 +228,25 @@
       <h2>Video Examples</h2>
       <div class="examples">
         <div class="example">
-          <video controls src="VID-20250502-WA0002.mp4"></video>
+          <video controls>
+            <source src="VID-20250502-WA0002.mp4" type="video/mp4">
+            Your browser does not support MP4 video.
+          </video>
+          <p>Example 1</p>
         </div>
         <div class="example">
-          <video controls src="VID-20250502-WA0005.mp4"></video>
-         
+          <video controls>
+            <source src="VID-20250502-WA0005.mp4" type="video/mp4">
+            Your browser does not support MP4 video.
+          </video>
+          <p>Example 2</p>
         </div>
         <div class="example">
-          <video controls src="VID-20250502-WA0006.mp4"></video>
-         
+          <video controls>
+            <source src="VID-20250502-WA0006.mp4" type="video/mp4">
+            Your browser does not support MP4 video.
+          </video>
+          <p>Example 3</p>
         </div>
       </div>
     </div>
