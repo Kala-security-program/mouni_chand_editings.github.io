@@ -11,29 +11,34 @@
       font-family: 'Orbitron', sans-serif;
       background: #0d0d0d;
       color: #e0e0e0;
-      overflow-x: hidden;
     }
     a { text-decoration: none; color: inherit; }
+
+    /* Header & Navigation */
     header { position: relative; z-index: 1; }
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 40px;
+      padding: 15px 20px;
       background: rgba(0,0,0,0.7);
       backdrop-filter: blur(8px);
     }
     .logo {
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: bold;
       color: #00ff9d;
-      text-shadow: 0 0 10px #00ff9d;
+      text-shadow: 0 0 8px #00ff9d;
     }
-    .menu { list-style: none; display: flex; gap: 25px; }
+    .menu {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
     .menu li a {
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: #e0e0e0;
-      padding: 8px 12px;
+      padding: 6px 8px;
       transition: color 0.3s, background 0.3s;
     }
     .menu li a:hover {
@@ -41,9 +46,11 @@
       background: #00ff9d;
       border-radius: 4px;
     }
+
+    /* Hero Section */
     #hero {
       position: relative;
-      height: 60vh;
+      height: 40vh;
       background: url('cyberpunk-bg.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -51,61 +58,67 @@
       align-items: center;
       text-align: center;
       color: #00ff9d;
+      padding: 0 10px;
     }
     #hero::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.5);
+      background: rgba(0,0,0,0.6);
     }
     #hero h1 {
       position: relative;
-      font-size: 3rem;
-      text-shadow: 0 0 15px #00ff9d;
-      margin-bottom: 10px;
+      font-size: 2rem;
+      text-shadow: 0 0 12px #00ff9d;
+      margin-bottom: 6px;
     }
     #hero p {
       position: relative;
-      font-size: 1.2rem;
+      font-size: 1rem;
       opacity: 0.9;
-      text-shadow: 0 0 8px #00ff9d;
+      text-shadow: 0 0 6px #00ff9d;
     }
+
+    /* Containers */
     .container {
-      max-width: 1000px;
-      margin: 40px auto;
+      max-width: 90%;
+      margin: 20px auto;
       background: rgba(10,10,10,0.8);
       border-radius: 8px;
-      box-shadow: 0 0 30px rgba(0,255,157,0.5);
+      box-shadow: 0 0 20px rgba(0,255,157,0.5);
       overflow: hidden;
     }
-    .content { padding: 40px; position: relative; z-index: 1; }
+    .content { padding: 20px; position: relative; z-index: 1; }
     .content h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
       color: #00ff9d;
-      text-shadow: 0 0 8px #00ff9d;
+      text-shadow: 0 0 6px #00ff9d;
     }
-    .features { display: flex; gap: 20px; margin-bottom: 40px; }
+
+    /* Features */
+    .features { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
     .feature {
-      flex: 1;
+      flex: 1 1 100px;
       background: #111;
       border: 1px solid #00ff9d;
       border-radius: 4px;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
       transition: transform 0.3s;
     }
-    .feature:hover { transform: translateY(-5px); }
+    .feature:hover { transform: translateY(-3px); }
     .feature h3 {
+      font-size: 1.1rem;
       color: #00ffaa;
-      margin-bottom: 10px;
-      text-shadow: 0 0 6px #00ffaa;
+      margin-bottom: 6px;
     }
-    .feature p { color: #ccc; }
+    .feature p { color: #ccc; font-size: 0.9rem; }
+
     /* Video Examples */
-    .examples { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; }
+    .examples { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
     .example {
-      flex: 1 1 calc(33% - 20px);
+      flex: 1 1 calc(50% - 10px);
       background: #111;
       border: 1px solid #00ff9d;
       border-radius: 4px;
@@ -114,72 +127,73 @@
     .example video {
       width: 100%;
       display: block;
-      background: #000;
     }
     .example p {
-      padding: 10px;
+      padding: 8px;
       text-align: center;
       color: #ccc;
+      font-size: 0.9rem;
     }
-    .form-group { margin-bottom: 20px; }
+
+    /* Form & Pricing */
+    .form-group { margin-bottom: 15px; }
     label {
       display: block;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       font-weight: 500;
       color: #00ff9d;
+      font-size: 0.9rem;
     }
     select, input {
       width: 100%;
-      padding: 12px;
+      padding: 10px;
       border: 1px solid #333;
       border-radius: 4px;
       background: #111;
       color: #e0e0e0;
-      font-size: 1rem;
-      transition: border-color 0.3s;
-    }
-    select:focus, input:focus {
-      border-color: #00ff9d;
-      outline: none;
+      font-size: 0.9rem;
     }
     .rates {
-      margin-top: 5px;
-      font-size: 0.9rem;
+      margin-top: 4px;
+      font-size: 0.8rem;
       color: #777;
     }
     button {
       background: #00ff9d;
       color: #0d0d0d;
       border: none;
-      padding: 14px;
-      font-size: 1rem;
+      padding: 12px;
+      font-size: 0.9rem;
       border-radius: 4px;
       cursor: pointer;
       transition: background 0.3s;
       width: 100%;
-      font-weight: bold;
-      text-transform: uppercase;
     }
     button:hover { background: #00cc85; }
     .result {
-      margin-top: 25px;
+      margin-top: 20px;
       text-align: center;
-      font-size: 1.4rem;
+      font-size: 1rem;
       font-weight: 500;
       color: #00ffaa;
     }
+
+    /* Footer */
     footer {
       background: #000;
       color: #777;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
       border-top: 1px solid #00ff9d;
+      font-size: 0.8rem;
     }
     footer a { color: #00ff9d; }
-    @media (max-width: 768px) {
-      .features, .examples { flex-direction: column; }
-      #hero { height: 40vh; }
-      #hero h1 { font-size: 2rem; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav { flex-direction: column; gap: 10px; }
+      .menu { flex-direction: column; gap: 5px; }
+      .examples { flex-direction: column; }
       .example { flex: 1 1 100%; }
     }
   </style>
@@ -209,15 +223,15 @@
       <div class="features">
         <div class="feature">
           <h3>Fast Turnaround</h3>
-          <p>Edits delivered within 24-48 hours.</p>
+          <p>48-hour delivery.</p>
         </div>
         <div class="feature">
           <h3>High Quality</h3>
-          <p>Professional-grade color grading & effects.</p>
+          <p>Pro-grade effects.</p>
         </div>
         <div class="feature">
           <h3>Custom Style</h3>
-          <p>Edits tailored to your brand identity.</p>
+          <p>Your brand, your vibe.</p>
         </div>
       </div>
     </div>
@@ -230,23 +244,16 @@
         <div class="example">
           <video controls>
             <source src="VID-20250502-WA0002.mp4" type="video/mp4">
-            Your browser does not support MP4 video.
+            Unsupported
           </video>
           <p>Example 1</p>
         </div>
         <div class="example">
           <video controls>
             <source src="VID-20250502-WA0005.mp4" type="video/mp4">
-            Your browser does not support MP4 video.
+            Unsupported
           </video>
           <p>Example 2</p>
-        </div>
-        <div class="example">
-          <video controls>
-            <source src="VID-20250502-WA0006.mp4" type="video/mp4">
-            Your browser does not support MP4 video.
-          </video>
-          <p>Example 3</p>
         </div>
       </div>
     </div>
@@ -263,28 +270,27 @@
         </select>
       </div>
       <div id="videoSection" class="form-group">
-        <label for="videoLength">Video Duration (seconds)</label>
+        <label for="videoLength">Video Duration (s)</label>
         <input type="number" id="videoLength" min="0" placeholder="e.g., 120">
-        <div class="rates">Rate: ₹4 per second (₹240 per minute)</div>
+        <div class="rates">₹4/sec</div>
       </div>
       <div id="imageSection" class="form-group" style="display:none;">
-        <label for="imageCount">Number of Images</label>
+        <label for="imageCount">Images</label>
         <input type="number" id="imageCount" min="0" placeholder="e.g., 10">
-        <div class="rates">Rate: ₹15 per image</div>
+        <div class="rates">₹15/img</div>
       </div>
-      <button id="calculateBtn">Calculate Price</button>
+      <button id="calculateBtn">Calculate</button>
       <div class="result" id="priceResult"></div>
     </div>
   </div>
 
   <footer id="contact">
-    <p>Email us at <a href="mailto:info@mounichand.com">info@mounichand.com</a></p>
-    <p>&copy; 2025 Mouni Chand. All rights reserved.</p>
+    <p>Contact: <a href="mailto:info@mounichand.com">info@mounichand.com</a></p>
+    <p>&copy; 2025 Mouni Chand</p>
   </footer>
 
   <script>
-    const videoRate = 4;
-    const imageRate = 15;
+    const rates = { video: 4, images: 15 };
     const serviceSelect = document.getElementById('serviceType');
     const videoSection = document.getElementById('videoSection');
     const imageSection = document.getElementById('imageSection');
@@ -303,15 +309,12 @@
     });
 
     calculateBtn.addEventListener('click', () => {
-      let total = 0;
-      if (serviceSelect.value === 'video') {
-        const secs = parseFloat(document.getElementById('videoLength').value) || 0;
-        total = secs * videoRate;
-      } else {
-        const count = parseInt(document.getElementById('imageCount').value) || 0;
-        total = count * imageRate;
-      }
-      priceResult.textContent = `Total Price: ₹${total.toFixed(2)}`;
+      const type = serviceSelect.value;
+      const value = type === 'video'
+        ? parseFloat(document.getElementById('videoLength').value) || 0
+        : parseInt(document.getElementById('imageCount').value) || 0;
+      const total = (rates[type] * value).toFixed(2);
+      priceResult.textContent = `₹${total}`;
     });
   </script>
 </body>
